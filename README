@@ -1,0 +1,15 @@
+Description
+===========
+If you need to fix Drupal permissions repeatedly then this script will help you,
+it is based on the guidelines given on the reference handbook page and performs 
+some checks before any modification to ensure it is not applied on files/directories outside your Drupal installation.
+
+Usage
+=====
+$ chmod +x /path/to/permissioner.sh
+$ su -c 'sh /path/to/permissioner.sh /path/to/drupal your_drupal_username'
+
+Reference
+=========
+Securing file permissions and ownership <http://drupal.org/node/244924>
+
