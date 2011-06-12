@@ -19,16 +19,16 @@
 path=${1%/}
 user=${2}
 group="www-data"
-help="\nHelp: This script is used to fix permissions of a Drupal installation\nyou need to provide the following arguments:\n\t 1) Path to your drupal installation\n\t 2) Username of the user that you want to give files/directories ownership\nNote: \"www-data\" (apache default) is assumed as the group the server is belonging to, if this is different you need to modify it manually by editing this script\n\nUsage: (sudo) bash ${0##*/} drupal_path user_name\n"
+help="\nHelp: This script is used to fix permissions of a Drupal installation\nYou need to provide the following arguments:\n\t 1) Path to your Drupal installation\n\t 2) Username of the user that you want to give files/directories ownership\nNote: \"www-data\" (apache default) is assumed as the group the server is belonging to, if this is different you need to modify it manually by editing this script\n\nUsage: (sudo) bash ${0##*/} Drupal_path user_name\n"
 
 if [ -z "${path}" ] || [ ! -d "${path}/sites" ] || [ ! -f "${path}/modules/system/system.module" ]; then
-echo "Please provide a valid drupal path"
+echo "Please provide a valid Drupal path."
 echo -e $help
 exit
 fi
 
 if [ -z "${user}" ] || [ "`id -un ${user} 2> /dev/null`" != "${user}" ]; then
-echo "Please provide a valid user"
+echo "Please provide a valid user."
 echo -e $help
 exit
 fi
