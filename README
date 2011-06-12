@@ -7,7 +7,7 @@ some checks before any modification to ensure it is not applied on files/directo
 Usage
 =====
 $ chmod +x /path/to/permissioner.sh
-$ su -c 'sh /path/to/permissioner.sh /path/to/drupal your_drupal_username'
+$ su -c 'sh /path/to/permissioner.sh /path/to/drupal owner_username'
 
 Reference
 =========
